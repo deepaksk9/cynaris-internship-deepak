@@ -10,69 +10,90 @@
 
     <meta
         name="description"
-        content="A semantic HTML5 page demonstrating accessible and structured web development."
+        content="A responsive HTML5 page demonstrating Flexbox and CSS Grid."
     >
 
-    <title>HTML5 Structure &amp; Semantics</title>
+    <title>HTML5 & CSS Layout Project</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header role="banner">
-        <h1>HTML5 Structure &amp; Semantics</h1>
+    <header class="site-header">
+        <h1>HTML5 &amp; CSS Layout Project</h1>
 
         <nav aria-label="Main navigation">
-            <ul>
+            <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#article">Article</a></li>
+                <li><a href="#cards">Cards</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="home" role="main">
-        <article id="article">
-            <header>
-                <h2>Understanding Semantic HTML</h2>
+    <main id="home">
+        <article>
+            <header class="hero">
+                <h2>Responsive Layout with Flexbox &amp; Grid</h2>
                 <p>
-                    Semantic HTML gives meaning and structure to web content.
+                    This page demonstrates modern CSS layout techniques
+                    using Flexbox and CSS Grid.
                 </p>
             </header>
 
-            <section aria-labelledby="importance-heading">
-                <h3 id="importance-heading">Why Semantic HTML Matters</h3>
+            <section id="cards" aria-labelledby="cards-heading">
+                <h2 id="cards-heading">Featured Cards</h2>
 
-                <p>
-                    Semantic elements make webpages easier to understand,
-                    maintain, and navigate.
-                </p>
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Flexbox</h3>
+                        <p>
+                            Flexbox is useful for arranging items in a
+                            single row or column.
+                        </p>
+                        <a href="#cards">Learn More</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>CSS Grid</h3>
+                        <p>
+                            CSS Grid is useful for creating rows and
+                            columns in a structured layout.
+                        </p>
+                        <a href="#cards">Learn More</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Responsive design allows webpages to work
+                            well on different screen sizes.
+                        </p>
+                        <a href="#cards">Learn More</a>
+                    </article>
+                </div>
             </section>
 
-            <section aria-labelledby="elements-heading">
-                <h3 id="elements-heading">Important HTML5 Elements</h3>
-
-                <ul>
-                    <li>Header</li>
-                    <li>Navigation</li>
-                    <li>Main content</li>
-                    <li>Article</li>
-                    <li>Section</li>
-                    <li>Aside</li>
-                    <li>Footer</li>
-                </ul>
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About This Project</h2>
+                <p>
+                    This project combines semantic HTML5 with Flexbox
+                    navigation and a CSS Grid card layout.
+                </p>
             </section>
         </article>
 
         <aside aria-label="Related information">
-            <h2>Related Information</h2>
+            <h2>Layout Information</h2>
             <p>
-                Semantic HTML improves document structure and supports
-                accessibility.
+                Flexbox handles one-dimensional layouts, while Grid
+                handles two-dimensional layouts.
             </p>
         </aside>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2026 HTML5 Learning Project</p>
+    <footer>
+        <p>&copy; 2026 HTML5 &amp; CSS Learning Project</p>
     </footer>
 </body>
 </html>
