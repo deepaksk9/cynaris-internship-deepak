@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A responsive HTML5 page demonstrating Flexbox and CSS Grid."
+    >
+
+    <title>HTML5 & CSS Layout Project</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>HTML5 &amp; CSS Layout Project</h1>
+
+        <nav aria-label="Main navigation">
+            <ul class="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cards">Cards</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="home">
+        <article>
+            <header class="hero">
+                <h2>Responsive Layout with Flexbox &amp; Grid</h2>
+                <p>
+                    This page demonstrates modern CSS layout techniques
+                    using Flexbox and CSS Grid.
+                </p>
+            </header>
+
+            <section id="cards" aria-labelledby="cards-heading">
+                <h2 id="cards-heading">Featured Cards</h2>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <h3>Flexbox</h3>
+                        <p>
+                            Flexbox is useful for arranging items in a
+                            single row or column.
+                        </p>
+                        <a href="#cards">Learn More</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>CSS Grid</h3>
+                        <p>
+                            CSS Grid is useful for creating rows and
+                            columns in a structured layout.
+                        </p>
+                        <a href="#cards">Learn More</a>
+                    </article>
+
+                    <article class="card">
+                        <h3>Responsive Design</h3>
+                        <p>
+                            Responsive design allows webpages to work
+                            well on different screen sizes.
+                        </p>
+                        <a href="#cards">Learn More</a>
+                    </article>
+                </div>
+            </section>
+
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">About This Project</h2>
+                <p>
+                    This project combines semantic HTML5 with Flexbox
+                    navigation and a CSS Grid card layout.
+                </p>
+            </section>
+        </article>
+
+        <aside aria-label="Related information">
+            <h2>Layout Information</h2>
+            <p>
+                Flexbox handles one-dimensional layouts, while Grid
+                handles two-dimensional layouts.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HTML5 &amp; CSS Learning Project</p>
+    </footer>
+</body>
+</html>
