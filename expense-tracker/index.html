@@ -1,0 +1,85 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your income, expenses, and available balance.">
+  <title>PennyWise | Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div>
+        <p class="eyebrow">PERSONAL FINANCE</p>
+        <h1>PennyWise 💸</h1>
+        <p class="subtitle">Small savings. Better habits.</p>
+      </div>
+      <span class="status">● Your finances</span>
+    </header>
+
+    <section class="summary" aria-label="Financial summary">
+      <article class="summary-card balance-card">
+        <p>Total Balance</p>
+        <h2 id="balance">₹0.00</h2>
+      </article>
+      <article class="summary-card">
+        <p>Total Income</p>
+        <h2 id="income">₹0.00</h2>
+      </article>
+      <article class="summary-card">
+        <p>Total Expenses</p>
+        <h2 id="expenses">₹0.00</h2>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Add a transaction</h2>
+      <form id="transaction-form">
+        <label for="description">Description</label>
+        <input id="description" type="text"
+          placeholder="e.g. Groceries" maxlength="80" required>
+
+        <div class="form-row">
+          <div>
+            <label for="amount">Amount (₹)</label>
+            <input id="amount" type="number"
+              placeholder="500" min="0.01" step="0.01" required>
+          </div>
+          <div>
+            <label for="type">Transaction type</label>
+            <select id="type" required>
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="date">Date</label>
+        <input id="date" type="date" required>
+
+        <button type="submit" class="primary-button">+ Add Transaction</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="list-heading">
+        <h2>Recent Transactions</h2>
+        <button id="clear-all" class="text-button" type="button">
+          Clear all
+        </button>
+      </div>
+
+      <p id="empty-state">No transactions yet. Add your first one!</p>
+      <ul id="transaction-list" aria-live="polite"></ul>
+    </section>
+
+    <footer>
+      <p>Built with HTML, CSS and JavaScript · Your data stays in this browser.</p>
+    </footer>
+  </main>
+</body>
+</html>
+```
