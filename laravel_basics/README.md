@@ -111,3 +111,37 @@ This registers the standard routes for all seven CRUD-related actions.
 The following diagram illustrates how requests flow through Laravel's MVC architecture.
 
 ![Laravel MVC Architecture](docs/mvc-architecture.png)
+
+
+## Week 3 Day 4 — Database Integration
+
+### Database Relationships
+
+Implemented a one-to-many relationship between posts and comments using Laravel Eloquent ORM.
+
+- `Post` model: Uses `hasMany()` to retrieve associated comments.
+- `Comment` model: Uses `belongsTo()` to retrieve its parent post.
+- The comments migration includes a `post_id` foreign key with cascading deletion.
+
+### Factories and Seeders
+
+Created `PostFactory` and `CommentFactory` to generate realistic test data.
+
+Created `PostCommentSeeder` to generate 20 posts, each with 1–5 comments.
+
+### Eloquent Queries
+
+Practised the following queries:
+
+- `where()` — filters posts by author.
+- `orderBy()` — sorts posts by creation date.
+- `with()` — eagerly loads related comments or their parent post.
+- `has()` — finds posts that have comments.
+
+### Verification
+
+Verified the database records using Laravel Tinker:
+- Posts: 21
+- Comments: 40
+
+Tested the post-comment relationships in both directions.
