@@ -1,6 +1,6 @@
 
 <?php
-
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
@@ -20,3 +20,4 @@ Route::post('/contact', function () {
 Route::get('/services', function () {
     return 'Our Services';
 })->name('services');
+Route::resource('posts', PostController::class);

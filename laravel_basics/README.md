@@ -56,3 +56,58 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+## MVC Architecture
+
+MVC stands for Model-View-Controller. It separates an application into three main components.
+
+### 1. Model
+The `Post` model represents post data and interacts with the database using Laravel Eloquent ORM.
+
+File: `app/Models/Post.php`
+
+### 2. View
+Blade templates display the post data to the user. The views include listing, creating, editing, and viewing posts.
+
+Files:
+- `resources/views/posts/index.blade.php`
+- `resources/views/posts/create.blade.php`
+- `resources/views/posts/edit.blade.php`
+- `resources/views/posts/show.blade.php`
+
+### 3. Controller
+The `PostController` handles requests, validates input, communicates with the model, and returns views or redirects.
+
+File: `app/Http/Controllers/PostController.php`
+
+### Request and Data Flow
+
+1. The user sends a request through the browser.
+2. Laravel routes the request to the appropriate controller method.
+3. The controller uses the Post model to read or modify database records.
+4. The controller returns a Blade view with the required data.
+5. Laravel renders the view and sends the HTML response to the browser.
+
+### CRUD Operations
+
+- Create: Add a new post.
+- Read: List posts and display post details.
+- Update: Edit an existing post.
+- Delete: Remove a post.
+
+### Routes
+
+Laravel resource routes are registered in `routes/web.php`:
+
+`Route::resource('posts', PostController::class);`
+
+This registers the standard routes for all seven CRUD-related actions.
+
+
+## MVC Architecture Diagram
+
+The following diagram illustrates how requests flow through Laravel's MVC architecture.
+
+![Laravel MVC Architecture](docs/mvc-architecture.png)
