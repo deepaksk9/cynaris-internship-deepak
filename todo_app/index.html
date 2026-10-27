@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | To-Do List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f4f3ff;
+      color: #24213b;
+    }
+    .app {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 28px #24213b18;
+    }
+    form { display: flex; gap: 10px; }
+    input {
+      flex: 1;
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      padding: 10px 14px;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #6254e7;
+      color: white;
+    }
+    ul { padding: 0; list-style: none; }
+    li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 10px 0;
+      padding: 12px;
+      background: #f5f4ff;
+      border-radius: 8px;
+    }
+    li span { flex: 1; overflow-wrap: anywhere; }
+    li.completed span {
+      text-decoration: line-through;
+      opacity: 0.55;
+    }
+    .delete { background: #d94359; }
+    .empty { color: #777; text-align: center; }
+    @media (max-width: 420px) {
+      body { margin: 15px auto; padding: 10px; }
+      .app { padding: 16px; }
+      form { flex-wrap: wrap; }
+      form input { flex-basis: 100%; }
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <h1>TaskFlow</h1>
+    <p>Small steps. Big progress.</p>
+
+    <form id="task-form">
+      <input id="task-input" type="text"
+             placeholder="What needs to get done?"
+             aria-label="New task" maxlength="200" required>
+      <button type="submit">Add task</button>
+    </form>
+
+    <p id="task-count" aria-live="polite">0 tasks</p>
+    <ul id="task-list"></ul>
+    <p id="empty-message" class="empty">No tasks yet. Add your first task!</p>
+  </main>
+</body>
+</html>
